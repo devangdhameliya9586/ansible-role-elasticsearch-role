@@ -21,12 +21,12 @@
   check_mode: no
   when: ansible_os_family == 'RedHat'
 
-- name: correct java version selected
-  alternatives:
-    name: java
-    path: "{{ java_full_path.stdout }}"
-    link: /usr/bin/java
-  when: ansible_os_family == 'RedHat' and java_full_path is defined
+# #- name: correct java version selected
+#   alternatives:
+#     name: java
+#     path: "{{ java_full_path.stdout }}"
+#     link: /usr/bin/java
+#   when: ansible_os_family == 'RedHat' and java_full_path is defined
 
 - name: Refresh java repo
   become: yes
