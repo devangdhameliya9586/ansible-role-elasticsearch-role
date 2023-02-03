@@ -6,4 +6,4 @@
     is_container: false
 
   roles:
-  - role: "{{ playbook_dir }}"
+  - role: 'roles/common'
